@@ -1,0 +1,3 @@
+ALERT TYPE: email and phone
+TIME: 2025-05-09_13-58-40
+DATA: {'name': 'Test User', 'email': 'test@example.com', 'phone': '+380961234567'}
