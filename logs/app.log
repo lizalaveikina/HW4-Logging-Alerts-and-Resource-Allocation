@@ -1,0 +1,17 @@
+2025-05-09 13:21:52,164 - INFO - Received request at /run endpoint
+2025-05-09 13:21:52,164 - INFO - Authorization successful. Requesting data from DB service...
+2025-05-09 13:21:52,190 - ERROR - Failed to contact DB service: HTTPConnectionPool(host='localhost', port=8002): Max retries exceeded with url: /get (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10b069d50>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-05-09 13:52:00,926 - INFO - Received request at /run endpoint
+2025-05-09 13:52:00,926 - INFO - Authorization successful. Requesting data from DB service...
+2025-05-09 13:52:00,944 - ERROR - Failed to contact DB service: HTTPConnectionPool(host='localhost', port=8002): Max retries exceeded with url: /get (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x107e69b40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-05-09 13:58:40,851 - INFO - Received request at /run endpoint
+2025-05-09 13:58:40,852 - INFO - Authorization successful.
+2025-05-09 13:58:40,852 - INFO - Data to process: {'name': 'Test User', 'email': 'test@example.com', 'phone': '+380961234567'}
+2025-05-09 13:58:40,853 - WARNING - ALERT triggered: email and phone — report saved.
+2025-05-09 13:58:40,869 - ERROR - Failed to contact Business service: HTTPConnectionPool(host='localhost', port=8001): Max retries exceeded with url: /process (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10a2f9b40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-05-09 14:07:45,770 - INFO - Received request at /run endpoint
+2025-05-09 14:07:45,770 - INFO - Authorization successful.
+2025-05-09 14:07:45,771 - INFO - Data to process: {'name': 'Test User', 'email': 'test@example.com', 'phone': '+380961234567'}
+2025-05-09 14:07:45,772 - WARNING - ALERT triggered: email and phone — report saved.
+2025-05-09 14:07:46,040 - INFO - Processed data: {'processed': True, 'original': {'name': 'Test User', 'email': 'test@example.com', 'phone': '+380961234567'}}
+2025-05-09 14:07:46,054 - ERROR - Failed to save data to DB: HTTPConnectionPool(host='localhost', port=8002): Max retries exceeded with url: /save (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x111507010>: Failed to establish a new connection: [Errno 61] Connection refused'))
