@@ -1,0 +1,34 @@
+version: "3.9"
+services:
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile.db
+    ports:
+      - "8002:8002"
+    networks:
+      - backend
+
+  business:
+    build:
+      context: .
+      dockerfile: Dockerfile.business
+    ports:
+      - "8001:8001"
+    networks:
+      - backend
+
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    ports:
+      - "8000:8000"
+    networks:
+      - backend
+    depends_on:
+      - db
+      - business
+
+networks:
+  backend:
